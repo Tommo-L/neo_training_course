@@ -44,6 +44,7 @@ namespace Neo.SmartContract
             if (owner != null) return false;//check if owner exist
             if (!Runtime.CheckWitness(owner)) return false;//check if owner own the domain
             Storage.Delete(Storage.CurrentContext, domain, owner);//delete
+            return true;
         }
     }
 }
